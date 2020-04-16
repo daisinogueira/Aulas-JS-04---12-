@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Somando Numeros</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 150px;
+        }
+        div {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1> Calculadora </h1>
+<input type='number' name="txtn1" id="txtn1"> +
+<input type="number" name="txtn2" id="txtn2">
+<input type="button" value="Somar" onclick="somar()">
+<div id="res">Resultado</div>
+
+<input type='number' name="num1s" id="num1s"> -
+<input type="number" name="num2s" id="num2s">
+<input type="button" value="Subtrair" onclick="subt()">
+<div id="res2">Resultado</div>
+
+<input type='number' name="num1m" id="num1m"> X
+<input type="number" name="num2m" id="num2m">
+<input type="button" value="Multiplicar" onclick="mult()">
+<div id="res3">Resultado</div>
+
+<input type='number' name="num1d" id="num1d"> /
+<input type="number" name="num2d" id="num2d">
+<input type="button" value="Dividir" onclick="divi()">
+<div id="res4">Resultado</div>
+
+<script>
+    function somar() {
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.getElementById('txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1+n1
+        res.innerHTML=  `${n1} + ${n2} = ${s}`
+    }
+    function subt() {
+        var tn1 = window.document.getElementById('num1s')
+        var tn2 = window.document.getElementById('num2s')
+        var res2 = window.document.getElementById('res2')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1-n1
+        res2.innerHTML=  `${n1} - ${n2} = ${s}`
+    }
+    function mult() {
+        var tn1 = window.document.getElementById('num1m')
+        var tn2 = window.document.getElementById('num2m')
+        var res3 = window.document.getElementById('res3')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1*n1
+        res3.innerHTML=  `${n1} X ${n2} = ${s}`
+    }
+    function divi() {
+        var tn1 = window.document.getElementById('num1d')
+        var tn2 = window.document.getElementById('num2d')
+        var res4 = window.document.getElementById('res4')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1/n1
+        res4.innerHTML=  `${n1} / ${n2} = ${s}`
+    }
+    
+</script>    
+</body>
+</html>
